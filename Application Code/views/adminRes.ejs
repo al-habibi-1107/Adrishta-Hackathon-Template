@@ -1,0 +1,18 @@
+<!-- displays  response to admin -->
+
+<%-  include('header')-%>
+<li id="contact"><a href="#"><%= pageName%></a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+    <% if (err === true){%>
+    <h3>Please enter valid values or options</h3>
+    <a href="/admin">Try Again Here</a>
+    <%}else{%>
+        <h3>The link for your Voting poll is</h3>
+        <a href="#">http://localhost:3000/polls</a>
+    <%}%>
+<%- include('footer')-%>

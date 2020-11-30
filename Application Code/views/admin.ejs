@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
-</head>
-<body>
-    <header>
-        
-    </header>
+<%-include('header')-%>
+<li id="contact"><a href="#"><%= pageName%></a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
     <h1>hello</h1>
     <form action="/admin" method="POST">
     <input type="text" name="ques" placeholder="Enter your question here.">
@@ -16,10 +13,10 @@
     <input type="text" name="op2" placeholder="Option 2">
     <input type="text" name="op3" placeholder="Option 3">
     <input type="number" name="totalVoters" placeholder="Enter total number of voters">
+    <input type="time" name="totalVoters" placeholder="Enter Time when the poll starts">
     
     <button type="submit">Make a Poll</button>
     </form>
 
 
-</body>
-</html>
+<%- include('footer')-%>
