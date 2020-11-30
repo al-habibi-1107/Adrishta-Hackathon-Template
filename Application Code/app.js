@@ -21,7 +21,7 @@ var options=[];
 var totalUsers;
 var startTime;
 
-
+/////////////// ADMIN ROUTE /////////////////
 app.get('/admin',function(req,res){
     res.render('admin',{pageName:"Admin Page"});
 });
@@ -43,6 +43,12 @@ app.post('/admin',function(req,res){
         
 });
 
+///////////////////// Poll Route /////////////////
+
+app.get('/polls',function(req,res){
+
+    res.render('poll',{pageName:"Polls",question: userQuestion,op1: options[0],op2:options[1],op3:options[2]});
+});
 
 
 

@@ -1,0 +1,20 @@
+<%- include('header')-%>
+
+<li id="contact"><a href="#"><%= pageName%></a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container">
+        <form action="/poll" method="POST" class="poll-form">
+            <h2><%=question%></h2>
+            <ul>
+                <li><input type="radio" name="op" value="op1"><%=op1%></li>
+                <li><input type="radio" name="op" value="op2"><%=op2%></li>
+                <li><input type="radio" name="op" value="op3"><%=op3%></li>
+            </ul>
+            <button type="submit">Submit</button>
+        </form>
+
+<%- include('footer')-%>
