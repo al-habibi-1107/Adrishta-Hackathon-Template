@@ -18,6 +18,16 @@ app.get('/admin',function(req,res){
     res.sendFile(__dirname+"/admin.html");
 });
 
+app.post('/admin',function(req,res){
+
+    console.log(req.body.ques);
+    console.log(req.body.op1);
+    console.log(req.body.op2);
+    console.log(req.body.op3);
+    console.log(req.body.totalVoters);
+});
+
+
 
 
 // set up the server to listen at a port
