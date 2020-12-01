@@ -46,9 +46,10 @@ TO RUN :
 ### Screenshots
 Images are in the application code/images 
 
+![0](https://github.com/al-habibi-1107/Adrishta-Hackathon-Template/blob/master/Application%20Code/Images/0.png)
 ![1](https://github.com/al-habibi-1107/Adrishta-Hackathon-Template/blob/master/Application%20Code/Images/1.png)
 ![2](https://github.com/al-habibi-1107/Adrishta-Hackathon-Template/blob/master/Application%20Code/Images/2.png)
-![3](https://github.com/al-habibi-1107/Adrishta-Hackathon-Template/blob/master/Application%20Code/Images/3.png)
+![3](https://github.com/al-habibi-1107/Adrishta-Hackathon-Template/blob/master/Application%20Code/Images/8.png)
 ![4](https://github.com/al-habibi-1107/Adrishta-Hackathon-Template/blob/master/Application%20Code/Images/4.png)
 ![5](https://github.com/al-habibi-1107/Adrishta-Hackathon-Template/blob/master/Application%20Code/Images/5.png)
 ![6](https://github.com/al-habibi-1107/Adrishta-Hackathon-Template/blob/master/Application%20Code/Images/6.png)
