@@ -19,8 +19,8 @@ also, make sure one can make at most a single vote(as quoted by the Indian Const
   - checks if the voter is on the voters' list( given by the admin ).
   
   - checks if the user has already voted (by checking against the database for a parameter
-  'isVoted' which sets to 'yes' once the user has voted and cannot be tampered with again, also the voter count helps to cross-check if a faulty vote has come to       notice)
-  - if no errors or problems occur, the 'isVoted' parameter is set 'yes'.
+   for the mailID , once the voter has voted , his id gets removed from the array. )
+  - The value of the vote is also taken and incremented keeping the count of the votes.
 - Once the link is on for 45mins(can be extended), the result of the poll is reflected on the admin page.
 
 #### Architecture Diagram
@@ -61,7 +61,7 @@ List of team member names and email IDs with their contributions.
 |-----------|-----|------------|
 |Kamil Anwar|kamilanwar2001@gmail.com|Backend|
 |Divyansh Singh|divyanshsinghmba@gmail.com|Frontend|
-|Aditya|mem3@example.com|Frontend and design|
+|Aditya|adityapankaj@gmail.com|Frontend and design|
 
 ### References
 Affix links to the online tools/repositories/blogs etc., which helped you along the development of the project
