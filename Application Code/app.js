@@ -23,11 +23,14 @@ app.set("view engine","ejs");
 
 
 
-var voteCounter;
+var voteCounter=0;
 var userQuestion ="What has 4 legs?" ;
-var options=["man","dan","pan"];
+var options=[];
+var optionsVote=[];
 var totalUsers=5;
 var startTime;
+var voterArr =[];
+var fileName;
 
 /////////////// ADMIN ROUTE /////////////////
 app.get('/admin',function(req,res){
@@ -39,7 +42,7 @@ app.post('/admin',function(req,res){
     var formData = formidable.IncomingForm();
     formData.parse(req,function(err,feilds,files){
         
-        var ext = files.file.name.substr(files.file.name.lastIndexOf("."));
+       fileName = files.file.name;
         var newpath = __dirname+"/uploads/"+files.file.name;
         fs.rename(files.file.path,newpath,function(err){
             
@@ -73,8 +76,32 @@ app.get('/polls',function(req,res){
 });
 
 app.post('/polls',function(req,res){
-   console.log(req.body.mail);
-   console.log(req.body.op);
+
+
+  var array = fs.readFileSync(__dirname+'/uploads/'+fileName).toString().split("\n");
+   for(i in array) {
+       voterArr.push(array[i]);
+   }
+   if(voterArr.includes(req.body.mail)){
+        if(req.body.op === options[0]){
+            optionsVote[0]++;
+        }else if(req.body.op === options[1]){
+            optionsVote[1]++;
+        }else{
+            optionsVote[2]++;
+        }
+        voteCounter++;
+
+      var index = voterArr.indexOf(req.body.mail)
+       console.log(index);
+        voterArr.splice(index,1);
+   }
+
+   console.log(voterArr);
+
+
+   res.render("resp");
+
 });
 
 
