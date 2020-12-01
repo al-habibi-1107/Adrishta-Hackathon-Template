@@ -7,12 +7,14 @@
 
   <body>
     <div class="container">
-        <form action="/poll" method="POST" class="poll-form">
+        <form action="/polls" method="POST" class="poll-form">
+            <label for="mail">Please enter your email-ID (This will not be shown to the admin)</label>
+            <input type="text" placeholder="Enter your email-ID" name="mail">
             <h2><%=question%></h2>
             <ul>
-                <li><input type="radio" name="op" value="op1"><%=op1%></li>
-                <li><input type="radio" name="op" value="op2"><%=op2%></li>
-                <li><input type="radio" name="op" value="op3"><%=op3%></li>
+                <li><input type="radio" name="op" value="<%=op1%>"><%=op1%></li>
+                <li><input type="radio" name="op" value="<%=op2%>"><%=op2%></li>
+                <li><input type="radio" name="op" value="<%=op3%>"><%=op3%></li>
             </ul>
             <button type="submit">Submit</button>
         </form>

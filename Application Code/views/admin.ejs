@@ -7,13 +7,16 @@
   <body>
     <div class="container">
     <h1>hello</h1>
-    <form action="/admin" method="POST">
+    <form action="/admin" method="POST" >
     <input type="text" name="ques" placeholder="Enter your question here.">
     <input type="text" name="op1" placeholder="Option 1">
     <input type="text" name="op2" placeholder="Option 2">
     <input type="text" name="op3" placeholder="Option 3">
     <input type="number" name="totalVoters" placeholder="Enter total number of voters">
     <input type="time" name="totalVoters" placeholder="Enter Time when the poll starts">
+    <label for="file">Upload a Excel file containig all the EmailIDs:</label>
+    <input type="file" placeholder="Choose a file to upload" name="file" required>
+
     
     <button type="submit">Make a Poll</button>
     </form>
