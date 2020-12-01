@@ -168,7 +168,27 @@ h2{
 
 }
 
+/* ADMIN */
 
+.admin input{
+    margin-top: 15px;
+    margin-left: 10%;
+    width: 20%;
+    padding: 3px 8px 8px 3px;
+}
+.admin label{
+    margin-top: 15px;
+    margin-left: 10%;
+    font-size: larger;
+}
+.admin button{
+    margin-left: 15%;
+    margin-top: 20px;
+}
+
+ h1{
+    margin-left: 30%;
+}
 
 
 
