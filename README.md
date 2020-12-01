@@ -44,15 +44,24 @@ TO RUN :
 
 
 ### Screenshots
+Images are in the application code/images 
+
 ![1](Application-Code/Images/1.png)
+![1](Application-Code/Images/2.png)
+![1](Application-Code/Images/3.png)
+![1](Application-Code/Images/4.png)
+![1](Application-Code/Images/5.png)
+![1](Application-Code/Images/6.png)
+![1](Application-Code/Images/7.png)
+
 
 ### Team Members
 List of team member names and email IDs with their contributions.
 |Member Name|Email|Contribution|
 |-----------|-----|------------|
-|Kamil Anwar|kamilanwar2001@gmail.com|Something important|
-|Divyansh Singh|divyanshsinghmba@gmail.com|Something important|
-|Aditya|mem3@example.com|Something important|
+|Kamil Anwar|kamilanwar2001@gmail.com|Backend|
+|Divyansh Singh|divyanshsinghmba@gmail.com|Frontend|
+|Aditya|mem3@example.com|Frontend and design|
 
 ### References
 Affix links to the online tools/repositories/blogs etc., which helped you along the development of the project
