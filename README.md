@@ -14,7 +14,8 @@ also, make sure one can make at most a single vote(as quoted by the Indian Const
 ### Solution Description
 
 - In this project we made a web app which has several routes (ex. /admin, /voter), only the admin is given the '/admin' route in which he adds the details of the poll, the nominees, and the list of voters(.txt file with every email at a different line).
-- A link is provided to the admin which can be mailed to the voters and the systems start at the time set by the admin.
+- The voters can enter the code in the homepage which will lead to poll page
+- A Security code is provided to the admin which can be mailed to the voters and the systems start at the time set by the admin.
 - Once the voter chooses his candidate and submits the form the server processes the request:
   - checks if the voter is on the voters' list( given by the admin ).
   
