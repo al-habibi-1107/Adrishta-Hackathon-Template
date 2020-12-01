@@ -5,7 +5,8 @@ const mongoose = require('mongoose');
 const readXlsxFile = require('read-excel-file/node');
 const multer = require('multer');
 const xlxs = require('xlsx');
-
+const formidable = require('formidable');
+const fs = require('fs');
 
 
 // setting up an instance of express
@@ -21,8 +22,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 
 
-//to locate and save the xlxs file by the user
-
 
 var voteCounter;
 var userQuestion ="What has 4 legs?" ;
@@ -37,26 +36,26 @@ app.get('/admin',function(req,res){
 
 app.post('/admin',function(req,res){
 
-    
+    var formData = formidable.IncomingForm();
+    formData.parse(req,function(err,feilds,files){
+        
+        var ext = files.file.name.substr(files.file.name.lastIndexOf("."));
+        var newpath = __dirname+"/uploads/"+files.file.name;
+        fs.rename(files.file.path,newpath,function(err){
+            
+        });
+            
+                        userQuestion = feilds.ques;
+                        options.push(feilds.op1);
+                        options.push(feilds.op2);
+                        options.push(feilds.op3);
+                        totalUsers = feilds.totalVoters;
+    });
+
+        
 
 
-    userQuestion = req.body.ques;
-    options.push(req.body.op1);
-    options.push(req.body.op2);
-    options.push(req.body.op3);
-    totalUsers = req.body.totalVoters;
-
-    
-    
-
-    //// to read and save the excel file to the server directory
-    // let filePath = __dirname + "/uploads/" + req.body.file;
-
-    //readXlsxFile(req.body.file).then(rows => console.log(rows));
-
-
-
-    if(userQuestion.length < 3||totalUsers<1){
+    if(userQuestion.length>3&&totalUsers<1){
 
         res.render("adminRes",{err:true,pageName: "Admin Page"});
     }
