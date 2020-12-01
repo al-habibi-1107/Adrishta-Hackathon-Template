@@ -34,13 +34,17 @@ An overview of:
  - For the front-end : HTML,CSS and ejs
  - For back-end : Node.js,MongoDB,Mongoose,Express
 
+TO RUN :
+- Clone the project
+- run npm install to install all packages
+- open a browser and check https://localhost:3000/admin for admin page
+- fill feilds and upload the txt file
+- use the link there or https://localhost:3000/polls for the polls section
 
-* Setup/Installations required to run the solution
 
-* Instructions to run the submitted code
 
 ### Screenshots
-Affix the relevant screenshots of the developed project here.
+![1](Application-Code/Images/1.png)
 
 ### Team Members
 List of team member names and email IDs with their contributions.
