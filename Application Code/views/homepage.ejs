@@ -1,0 +1,31 @@
+<%- include('header')-%>
+<li id="contact"><a href="#"><%= pageName%></a></li>
+        </ul>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container home">
+
+        <h1>Welcome to Vote Bank!</h1>
+        <div class="cards">
+            <a href="http://localhost:3000/admin">
+            <div class="card">
+                <h3>Make your own poll</h3>
+                <img src="Images/vote.png" alt="vote">
+            </div>
+             </a>
+                
+            <div class="card">
+                <h3>Vote for a poll</h3>
+                <img src="Images/vote-2.png" alt="">
+                <form action="/" method="POST">
+                    <input type="text" placeholder="Vote Code" name="code">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+       
+
+
+<%- include('footer')-%>

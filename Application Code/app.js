@@ -27,12 +27,36 @@ var voterArr =[];
 var fileName;
 var flag =1;
 
+var SecurityCode = "";
+
+
+//////////////// Home Route ////////////////
+
+app.get('/',function(req,res){
+
+
+    res.render('homepage',{pageName: "Home"})
+});
+
+app.post('/',function(req,res){
+    if(req.body.code == SecurityCode){
+        res.redirect('/polls')
+    }else{
+        res.render('error');
+    }
+})
+
+
+
 /////////////// ADMIN ROUTE /////////////////
 app.get('/admin',function(req,res){
     res.render('admin',{pageName:"Admin Page"});
 });
 
 app.post('/admin',function(req,res){
+
+    // security code
+   
 
     var formData = formidable.IncomingForm();
     formData.parse(req,function(err,feilds,files){
@@ -49,12 +73,14 @@ app.post('/admin',function(req,res){
                         options.push(feilds.op3);
                         totalUsers = feilds.totalVoters;
 
+                        SecurityCode =  [...Array(6)].map(i=>(~~(Math.random()*36)).toString(36)).join('');
+                        console.log(SecurityCode);
                         if(userQuestion.length<3){
                     
-                            res.render("adminRes",{err:true,pageName: "Admin Page"});
+                            res.render("adminRes",{err:true,pageName: "Admin Page",code:SecurityCode});
                         }
                         else {
-                            res.render("adminRes",{err:false,pageName: "Admin Page"});
+                            res.render("adminRes",{err:false,pageName: "Admin Page",code:SecurityCode});
                         }
                         console.log(userQuestion);
                         console.log(userQuestion.length);
@@ -111,7 +137,7 @@ app.post('/polls',function(req,res){
 
 app.get('/result',function(req,res){
 
-    res.render('result',{pageName: "Result",op1:options[0],v1:optionsVote[0],op2:options[1],v2:optionsVote[1],op3:options[2],v3:optionsVote[2]});
+    res.render('result',{pageName: "Vote",op1:options[0],v1:optionsVote[0],op2:options[1],v2:optionsVote[1],op3:options[2],v3:optionsVote[2]});
 
 });
 
